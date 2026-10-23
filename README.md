@@ -1,4 +1,20 @@
-.github/workflows/autopilot.yml
+[![Kids Channel Autopilot](https://github.com/komunaisaiah-max/Kids-autopilot/actions/workflows/autopilot.yml/badge.svg)](https://github.com/komunaisaiah-max/Kids-autopilot/actions/workflows/autopilot.yml)
+      - name: Generate content brief
+        run: python autopilot.py
+
+      - name: Discover trending short-form topics
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python trend_discovery.py
+        
+      - name: Generate content brief
+        run: python autopilot.py
+
+      - name: Discover trending short-form topics
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python trend_discovery.py
+        .github/workflows/autopilot.yml
 name: Kids Channel Autopilot
 
 on:
